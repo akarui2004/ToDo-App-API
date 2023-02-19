@@ -1,4 +1,3 @@
-    - Priority: low, normal, high, highest. This will map to priority table
 # ToDos Application API
 
 ## What we will have in this application?
@@ -55,7 +54,7 @@
         - 10 mins notification before end task: "The task will end at hh:mm."
         - 1 mins or 30 second notification after end task: "The task has been ended."
 
-    - Priority: low, normal, high, highest. This will map to priority table
+- Priority: low, normal, high, highest. This will map to priority table
 
 ### Tag
 - CRUD a tag

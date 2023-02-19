@@ -1,3 +1,4 @@
+    - Priority: low, normal, high, highest. This will map to priority table
 # ToDos Application API
 
 ## What we will have in this application?

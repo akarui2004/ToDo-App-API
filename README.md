@@ -62,8 +62,13 @@
 - Tag will have: uuid, user_id, title, color, created_at, updated_at, deleted_at
 - Tag belong to many tasks => we will have a taggable
 
-### Taggable
-- Taggable will have: tag_id, taggable_id, taggable_type
+### Project Has Tag
+- Project can have many tags
+- ProjectHasTag will have: uuid, project_id, tag_id
+
+### Task Has Tag
+- Task can have many tags
+- TaskHasTag will have: uuid, task_id, tag_id
 
 ## What a technical achieve in this application?
 

@@ -78,3 +78,9 @@
 - ExpressJS
 - Sequelize
 - MySQL
+
+## Database
+
+### DBDiagram
+- [TODOS Database](https://dbdiagram.io/d/63c7b3a2296d97641d7a69bc)
+- ![TODOS DB Image](/README/ToDos%20API.png)

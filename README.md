@@ -2,20 +2,41 @@
 
 ## What we will have in this application?
 
+### Authentication
+- Register user to the application
+- Reset password
+- Forgot password
+- User will have: uuid, first_name, last_name, created_at, updated_at, deleted_at
+- Credential will have: uuid, user_id, username, email, password, created_at, updated_at, deleted_at
+
+### User with Project and Task
+- User can have many projects
+- User can have many tasks through project
+
+### User with Priority
+- User can have many priorities
+
+### User with Tag
+- User can have many tags
+
 ### Project
 - Start on the left hand side
 - The project will have many todos board view
 - CRUD a project
 - Project will have: uuid, title, position, create_at, updated_at, deleted_at
 - Project may be have multiple tags (**will implement in the future**)
+- Project belongs to user
 
 ### Priority
 - Will have 4 master priority and can't be CRUD this.
 - 4 master priority: low, normal, high, highest
-- Priority will have: uuid, title, color, is_master, created_at, updated_at, deleted_at
+- Priority belongs to user
+- Priority will have: uuid, user_id, title, color, is_master, created_at, updated_at, deleted_at
 
 ### Task
 - CRUD a task
+- Task belongs to project
+- Task belongs to user through project
 - Task will have many tags
 - Task will have one priority
 - Task will have: uuid, priority_id, project_id, title, description, status, start_time, end_time, created_at, updated_at, deleted_at
@@ -37,7 +58,8 @@
 
 ### Tag
 - CRUD a tag
-- Tag will have: uuid, title, color, created_at, updated_at, deleted_at
+- Tag belongs to user
+- Tag will have: uuid, user_id, title, color, created_at, updated_at, deleted_at
 - Tag belong to many tasks => we will have a taggable
 
 ### Taggable

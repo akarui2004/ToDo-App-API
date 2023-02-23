@@ -111,3 +111,4 @@ dist
 /config/local.toml
 /config/staging.toml
 /config/production.toml
+/config/development.toml

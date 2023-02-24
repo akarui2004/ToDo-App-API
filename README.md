@@ -85,3 +85,8 @@
 - [TODOS Database](https://dbdiagram.io/d/63c7b3a2296d97641d7a69bc)
 
 ![TODOS DB Image](/README/ToDos%20API.png)
+
+
+### INSTALLATION NOTE
+- Copy from file base.toml to development.toml that can run the source in the local
+- If we are running in the PROD, we need to set the process.env.NODE_ENV

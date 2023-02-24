@@ -106,3 +106,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Toml file
+/config/local.toml
+/config/staging.toml
+/config/production.toml
+/config/development.toml

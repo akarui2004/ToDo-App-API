@@ -1,7 +1,8 @@
 import express, { Application } from "express";
 import router from "./routes";
 import { Defaults } from "./constants";
-import sequelize from "./utils/datasource";
+import { SequelizeConnection } from "./utils/datasource";
+// import sequelize from "./utils/datasource";
 
 (async () => {
   const app: Application = express();
@@ -10,17 +11,16 @@ import sequelize from "./utils/datasource";
 
   app.use(router);
 
+  await SequelizeConnection.connect();
+
   //Init application server
   const httpPort = Defaults.PORT;
   app.listen(httpPort, () => {
-    console.log(`server listening on ${httpPort}`);
+    console.log(`⚡️[server]: running at http://localhost:${httpPort}`);
   });
-
-  // Init DB
-  sequelize.authenticate().then(() => {
-    console.log('Connection has been established successfully.');
-  }).catch((error) => {
-      console.error('Unable to connect to the database: ', error);
-  });
-  
 })();
+
+process.on('SIGINT', () => {
+  SequelizeConnection.close();
+  process.exit();
+});

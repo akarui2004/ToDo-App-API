@@ -10,4 +10,8 @@ router.use(helmet(), allowCors());
 // note: public routes doesn't have /public prefix
 router.use(public0);
 
+router.get("/list", (req, res) => {
+  res.send("test");
+})
+
 export default router;

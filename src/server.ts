@@ -1,15 +1,16 @@
-import express, { Application } from "express";
-import router from "./routes";
+import express from "express";
 import { Defaults } from "./constants";
+import { printRouterInTerminal } from "./log";
+import router from "./routes";
 import { SequelizeConnection } from "./utils/datasource";
-// import sequelize from "./utils/datasource";
 
 (async () => {
-  const app: Application = express();
+  const app = express();
 
   app.use("/", express.static("./public", { dotfiles: "allow" }));
 
   app.use(router);
+  printRouterInTerminal(app);
 
   await SequelizeConnection.connect();
 

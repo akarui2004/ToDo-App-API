@@ -16,8 +16,10 @@
   "author": "Minh<minhdpc@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@types/express-list-endpoints": "^6.0.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "express-list-endpoints": "^6.0.0",
     "express-validator": "^6.15.0",
     "helmet": "^6.0.1",
     "mysql2": "^3.1.2",
